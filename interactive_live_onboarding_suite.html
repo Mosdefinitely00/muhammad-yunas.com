@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad A. Yunas - Interactive Onboarding & GTM Reference Suite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 340px;
+            }
+        }
+        .bg-primary { background-color: #0F294A; }
+        .text-primary { color: #0F294A; }
+        .border-primary { border-color: #0F294A; }
+        .bg-secondary { background-color: #2B6CB0; }
+        .text-secondary { color: #2B6CB0; }
+        .bg-accent { background-color: #38B2AC; }
+        .text-accent { color: #38B2AC; }
+        .border-accent { border-color: #38B2AC; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <header class="bg-primary text-white py-12 px-6 sm:px-12 lg:px-20 shadow-md">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div>
+                <h1 class="text-3xl md:text-5xl font-bold tracking-tight">MUHAMMAD A. YUNAS</h1>
+                <p class="text-lg text-blue-200 mt-2 font-light uppercase tracking-wider">Candidate Onboarding &amp; Executive Reference Suite</p>
+                <p class="text-sm text-slate-300 mt-1">Product Marketing Leadership in AI-Native Platforms, Regulated SaaS &amp; Enterprise GTM</p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+                <a href="mailto:yunasmuh@gmail.com" class="bg-secondary hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all">Email Direct</a>
+                <a href="https://linkedin.com/in/muhammad-yunas" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all">LinkedIn</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 sm:px-12 lg:px-20">
+            <nav class="flex space-x-8 overflow-x-auto py-4">
+                <button onclick="switchTab('playbook')" id="tab-playbook" class="text-primary border-b-2 border-primary font-bold text-sm uppercase tracking-wider pb-2 whitespace-nowrap transition-all">
+                    1. Comprehensive Playbook
+                </button>
+                <button onclick="switchTab('whiteboard')" id="tab-whiteboard" class="text-slate-500 hover:text-primary border-b-2 border-transparent font-semibold text-sm uppercase tracking-wider pb-2 whitespace-nowrap transition-all">
+                    2. Whiteboard Script
+                </button>
+                <button onclick="switchTab('cheatsheet')" id="tab-cheatsheet" class="text-slate-500 hover:text-primary border-b-2 border-transparent font-semibold text-sm uppercase tracking-wider pb-2 whitespace-nowrap transition-all">
+                    3. Executive Cheat Sheet
+                </button>
+            </nav>
+        </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto px-6 sm:px-12 lg:px-20 py-12">
+
+        <div id="content-playbook" class="space-y-12">
+            <section class="bg-white rounded-xl shadow-md p-8 lg:p-12">
+                <div class="border-b border-slate-200 pb-6 mb-8">
+                    <span class="bg-blue-100 text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Format 1</span>
+                    <h2 class="text-3xl font-extrabold text-primary mt-2">The Comprehensive Candidate Playbook</h2>
+                    <p class="text-slate-500 mt-1">An operational landscape, execution expectation matrix, and modern technical stack blueprint.</p>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-3">The Mission: Category Reframing at Scale</h3>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            The standard B2B enterprise SaaS playbook relies heavily on transactional volume. The playbook for complex, highly regulated, and AI-native platforms relies fundamentally on **trust and cognitive reduction**.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed">
+                            When selling API-first compliance systems, tax engines, or cybersecurity infrastructures, enterprise buyers do not purchase backend features; they purchase **risk mitigation, margin safety, and operational continuity**.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                        <div class="border border-slate-100 bg-slate-50 rounded-xl p-6">
+                            <div class="text-accent text-3xl font-bold mb-2">01</div>
+                            <h4 class="font-bold text-primary mb-2">Listen Deeply</h4>
+                            <p class="text-xs text-slate-500">Reclaim direct, unfiltered market signals from customer telemetry, active user behaviors, and cross-functional revenue teams.</p>
+                        </div>
+                        <div class="border border-slate-100 bg-slate-50 rounded-xl p-6">
+                            <div class="text-accent text-3xl font-bold mb-2">02</div>
+                            <h4 class="font-bold text-primary mb-2">Clarify Relentlessly</h4>
+                            <p class="text-xs text-slate-500">Translate complex backend code, database infrastructure, and compliance engines into explicit business outcomes.</p>
+                        </div>
+                        <div class="border border-slate-100 bg-slate-50 rounded-xl p-6">
+                            <div class="text-accent text-3xl font-bold mb-2">03</div>
+                            <h4 class="font-bold text-primary mb-2">Execute Decisively</h4>
+                            <p class="text-xs text-slate-500">Arm the outbound commercial machinery with high-impact playbooks, dynamic value calculators, and clear, structured enablement.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-xl shadow-md p-8 lg:p-12">
+                <h3 class="text-2xl font-extrabold text-primary mb-6">Professional Expectations &amp; GTM Standards</h3>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="w-2 h-2 rounded-full bg-accent mt-2 shrink-0"></div>
+                        <div>
+                            <h4 class="font-bold text-primary text-lg">Zero Feature-First Messaging</h4>
+                            <p class="text-slate-600 text-sm mt-1">Every messaging document, solution brief, and presentation slide must align directly to an executive metric: risk exposure, revenue velocity, or cost containment.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-2 h-2 rounded-full bg-accent mt-2 shrink-0"></div>
+                        <div>
+                            <h4 class="font-bold text-primary text-lg">Deep Cross-Functional Alliance</h4>
+                            <p class="text-slate-600 text-sm mt-1">Product Marketing acts as the absolute GTM connective tissue. We coordinate with Product Management to capture roadmaps and with Sales/Success to convert technical readiness into signed agreements.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-2 h-2 rounded-full bg-accent mt-2 shrink-0"></div>
+                        <div>
+                            <h4 class="font-bold text-primary text-lg">Continuous Market Sensing</h4>
+                            <p class="text-slate-600 text-sm mt-1">GTM strategy is a living cycle. We run active customer interview programs, regular win/loss reviews, and coordinate continuously with tier-1 analyst groups.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-xl shadow-md p-8 lg:p-12">
+                <h3 class="text-2xl font-extrabold text-primary mb-6">The First 90 Days Execution Roadmap</h3>
+                <div class="relative border-l-2 border-slate-200 ml-4 space-y-10">
+                    <div class="relative pl-8">
+                        <div class="absolute -left-[9px] top-1 bg-accent w-4 h-4 rounded-full border-4 border-white"></div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-accent">Days 0 - 30</span>
+                        <h4 class="font-bold text-primary text-lg mt-1">Listen Deeply (Assessment)</h4>
+                        <p class="text-slate-600 text-sm mt-1 mb-3">Audit the complete core collateral asset suite, map existing pipeline telemetry, and conduct a 15-interview campaign with customers, product managers, and account executives.</p>
+                    </div>
+                    <div class="relative pl-8">
+                        <div class="absolute -left-[9px] top-1 bg-secondary w-4 h-4 rounded-full border-4 border-white"></div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-secondary">Days 31 - 60</span>
+                        <h4 class="font-bold text-primary text-lg mt-1">Clarify Relentlessly (Alignment)</h4>
+                        <p class="text-slate-600 text-sm mt-1 mb-3">Rebuild the master messaging matrix to convert features to value outcomes. Standardize sales decks, solution briefs, and deploy live enablement bootcamps for global sales teams.</p>
+                    </div>
+                    <div class="relative pl-8">
+                        <div class="absolute -left-[9px] top-1 bg-primary w-4 h-4 rounded-full border-4 border-white"></div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary">Days 61 - 90</span>
+                        <h4 class="font-bold text-primary text-lg mt-1">Execute Decisively (Acceleration)</h4>
+                        <p class="text-slate-600 text-sm mt-1 mb-3">Co-sell on key active enterprise pipeline opportunities, integrate the revised value messaging into digital demand channels, and measure commercial cycle reduction metrics.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="content-whiteboard" class="hidden space-y-12">
+            <section class="bg-white rounded-xl shadow-md p-8 lg:p-12">
+                <div class="border-b border-slate-200 pb-6 mb-8">
+                    <span class="bg-teal-100 text-accent text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Format 2</span>
+                    <h2 class="text-3xl font-extrabold text-primary mt-2">The 10-Minute Whiteboard Script</h2>
+                    <p class="text-slate-500 mt-1">An engaging visual narrative designed for onboarding, internal alignment, and commercial training.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-primary pl-4 py-2">
+                            <span class="text-xs uppercase font-bold text-slate-400">Step 1: The Problem (0:00 - 2:00)</span>
+                            <h4 class="font-bold text-primary mt-1">Draw "The Feature Trap" Triangle</h4>
+                            <p class="text-slate-600 text-sm mt-2">
+                                "Welcome, team. When enterprise SaaS deals stall, we assume it's a product issue. It's not. It's a positioning issue. Most tech teams spend 90% of their time talking at the base of this triangle: Product Features and Technical Specs. But C-suite buyers purchase the top level: Strategic Outcomes. We invert this on day one."
+                            </p>
+                        </div>
+                        <div class="border-l-4 border-secondary pl-4 py-2">
+                            <span class="text-xs uppercase font-bold text-slate-400">Step 2: The Operational Triad (2:00 - 5:00)</span>
+                            <h4 class="font-bold text-primary mt-1">Map the CQ-EQ-IQ Engine</h4>
+                            <p class="text-slate-600 text-sm mt-2">
+                                "We run GTM with an integrated system: Cultural Intelligence (CQ) for localized global scale; Emotional Intelligence (EQ) for cross-functional alignment; and Analytical/AI Rigor (IQ) to parse competitor shifts 3 months before they occur."
+                            </p>
+                        </div>
+                        <div class="border-l-4 border-accent pl-4 py-2">
+                            <span class="text-xs uppercase font-bold text-slate-400">Step 3: The GTM Payoff (5:00 - 10:00)</span>
+                            <h4 class="font-bold text-primary mt-1">Write the Performance Metrics</h4>
+                            <p class="text-slate-600 text-sm mt-2">
+                                "The yield of this pipeline loop isn't just aesthetic slides. It is real commercial acceleration: compressing cycle times, maximizing win rates, and creating compounding ARR."
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900 text-white rounded-xl p-8 flex flex-col justify-between border-4 border-slate-800 shadow-inner">
+                        <div class="space-y-6 text-center">
+                            <h4 class="text-xs tracking-widest text-accent uppercase font-bold">Whiteboard Simulator</h4>
+                            
+                            <div class="max-w-xs mx-auto border-2 border-slate-700 p-4 rounded-lg bg-slate-950">
+                                <span class="text-xs font-bold text-secondary uppercase block mb-2">The Feature Trap</span>
+                                <div class="w-0 h-0 border-l-[60px] border-l-transparent border-r-[60px] border-r-transparent border-b-[100px] border-b-accent mx-auto relative">
+                                    <span class="absolute top-12 left-1/2 -translate-x-1/2 text-[10px] text-primary font-bold">Outcome</span>
+                                    <span class="absolute top-20 left-1/2 -translate-x-1/2 text-[8px] text-white whitespace-nowrap">Technical</span>
+                                    <span class="absolute top-[88px] left-1/2 -translate-x-1/2 text-[8px] text-white">Features</span>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-center gap-4 py-4">
+                                <div class="w-16 h-16 rounded-full border-2 border-secondary flex items-center justify-center text-xs font-bold">CQ</div>
+                                <div class="w-16 h-16 rounded-full border-2 border-secondary flex items-center justify-center text-xs font-bold">EQ</div>
+                                <div class="w-16 h-16 rounded-full border-2 border-secondary flex items-center justify-center text-xs font-bold">IQ</div>
+                            </div>
+
+                            <div class="border-t border-slate-800 pt-4">
+                                <span class="text-2xl font-extrabold text-accent block">-40% Sales Cycle</span>
+                                <span class="text-2xl font-extrabold text-white block">+42% Win Rate</span>
+                            </div>
+                        </div>
+                        <p class="text-[10px] text-slate-500 text-center mt-6">Simulated whiteboard workspace configuration</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="content-cheatsheet" class="hidden space-y-12">
+            <section class="bg-white rounded-xl shadow-md p-8 lg:p-12">
+                <div class="border-b border-slate-200 pb-6 mb-8">
+                    <span class="bg-slate-100 text-slate-600 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Format 3</span>
+                    <h2 class="text-3xl font-extrabold text-primary mt-2">Executive Cheat Sheet</h2>
+                    <p class="text-slate-500 mt-1">High-signal GTM metrics, predictive performance telemetry, and onboarding risk mitigation profiles.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-4">Core Commercial Performance Telemetry</h3>
+                        <p class="text-sm text-slate-600 mb-6">Visualizing direct pipeline influence and deal velocity improvements achieved across enterprise B2B portfolios.</p>
+                        
+                        <div class="chart-container">
+                            <canvas id="liveMetricChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <h3 class="text-xl font-bold text-primary">Onboarding Bottleneck Mitigation</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                <h4 class="font-bold text-primary text-sm uppercase tracking-wide">Bottleneck 1: Product-to-Revenue Sync Drag</h4>
+                                <p class="text-slate-600 text-xs mt-1"><strong>The Risk:</strong> Delayed communication loops between product development and product marketing slow launch cycles.</p>
+                                <p class="text-slate-700 text-xs mt-2"><strong>Mitigation:</strong> Establish a continuous, weekly sync pipeline between PM and PMM to lock messaging alignments early.</p>
+                            </div>
+
+                            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                <h4 class="font-bold text-primary text-sm uppercase tracking-wide">Bottleneck 2: Sales Field Adoption Resistance</h4>
+                                <p class="text-slate-600 text-xs mt-1"><strong>The Risk:</strong> Outbound commercial teams defaulting back to familiar, feature-heavy presentation decks.</p>
+                                <p class="text-slate-700 text-xs mt-2"><strong>Mitigation:</strong> Treat Sales as our internal customer. Run dynamic bootcamps and co-sell on live strategic deals to prove the model.</p>
+                            </div>
+
+                            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                <h4 class="font-bold text-primary text-sm uppercase tracking-wide">Bottleneck 3: Technical-Regulatory Complexity</h4>
+                                <p class="text-slate-600 text-xs mt-1"><strong>The Risk:</strong> Messaging getting lost in complex tax compliance or technical product jargon, stalling out sales cycles.</p>
+                                <p class="text-slate-700 text-xs mt-2"><strong>Mitigation:</strong> Translate regulatory specifications directly into CFO value frameworks while leaving details to backend documentation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 text-center mt-16 border-t border-slate-800">
+        <p class="font-bold text-white tracking-widest uppercase mb-2">Listen Deeply. Clarify Relentlessly. Execute Decisively.</p>
+        <p class="text-xs">Muhammad A. Yunas &copy; 2026. Custom Interactive Portfolio Environment.</p>
+    </footer>
+
+    <script>
+        function switchTab(tabId) {
+            const sections = ['playbook', 'whiteboard', 'cheatsheet'];
+            sections.forEach(s => {
+                document.getElementById(`content-${s}`).classList.add('hidden');
+                const btn = document.getElementById(`tab-${s}`);
+                btn.classList.remove('text-primary', 'border-primary', 'font-bold');
+                btn.classList.add('text-slate-500', 'border-transparent', 'font-semibold');
+            });
+
+            document.getElementById(`content-${tabId}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`tab-${tabId}`);
+            activeBtn.classList.remove('text-slate-500', 'border-transparent', 'font-semibold');
+            activeBtn.classList.add('text-primary', 'border-primary', 'font-bold');
+        }
+
+        function wrapLabel(label, maxChars = 16) {
+            if (label.length <= maxChars) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxChars && currentLine.length > 0) {
+                    lines.push(currentLine.trim());
+                    currentLine = word + ' ';
+                } else {
+                    currentLine += word + ' ';
+                }
+            });
+            if (currentLine.trim().length > 0) lines.push(currentLine.trim());
+            return lines;
+        }
+
+        const rawLabels = ['Competitive Win Rate', 'Partner Sales Cycles', 'ARR Preserved'];
+        const formattedLabels = rawLabels.map(l => wrapLabel(l, 16));
+
+        const ctxMetric = document.getElementById('liveMetricChart').getContext('2d');
+        new Chart(ctxMetric, {
+            type: 'bar',
+            data: {
+                labels: formattedLabels,
+                datasets: [{
+                    label: 'Impact Metric (%)',
+                    data: [42, 66, 85],
+                    backgroundColor: ['#0F294A', '#2B6CB0', '#38B2AC'],
+                    borderRadius: 4,
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        grid: { color: '#f1f5f9' },
+                        ticks: { color: '#64748b' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#475569', font: { weight: '600' } }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

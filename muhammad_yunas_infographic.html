@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+PLAN SUMMARY:
+Section 1: Executive Snapshot (Inform) - High-level impact KPIs (Revenue, Pipeline) using large typography cards.
+Section 2: Velocity & Efficiency (Change/Compare) - Visualizing sales cycle reductions, CAC, and YoY growth.
+Section 3: Market Dominance (Compare) - Visualizing win-rate improvements and market share gains.
+Section 4: The CQ-EQ-IQ Framework (Relationships) - Conceptual diagram of the operational triad using structured HTML.
+Section 5: MarTech Arsenal (Organize) - Categorized technology stack using a CSS grid.
+
+CHART SELECTION SUMMARY:
+Data Point: Velocity Metrics -> Goal: Change/Compare -> Chosen Visualization: Horizontal Bar Chart (Chart.js) -> Justification: Ideal for comparing discrete percentage improvements across different operational metrics. NO SVG used.
+Data Point: Dominance Metrics -> Goal: Compare -> Chosen Visualization: Polar Area Chart (Chart.js) -> Justification: Excellent for showing multi-dimensional performance multipliers (Win rate, Market share, Promotion rate) radiating from a core. NO SVG used.
+Data Point: CQ-EQ-IQ Framework -> Goal: Relationships -> Chosen Visualization: CSS Styled Circles -> Justification: Effectively represents overlapping conceptual domains without relying on external diagramming tools. NO SVG used.
+
+CONFIRMATION:
+Neither Mermaid JS nor SVG were used anywhere in this output. All graphics are rendered via HTML/CSS or Canvas via Chart.js.
+PALETTE: "Brilliant Blues"
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad A. Yunas - Performance Telemetry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .bg-primary { background-color: #0F294A; }
+        .text-primary { color: #0F294A; }
+        .border-primary { border-color: #0F294A; }
+        
+        .bg-secondary { background-color: #2B6CB0; }
+        .text-secondary { color: #2B6CB0; }
+        
+        .bg-accent { background-color: #38B2AC; }
+        .text-accent { color: #38B2AC; }
+
+        .cq-eq-iq-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .cq-eq-iq-container {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+        .framework-node {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            color: white;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+            transition: transform 0.3s ease;
+        }
+        .framework-node:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <header class="bg-primary text-white py-16 px-6 sm:px-12 lg:px-24 shadow-lg">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-4">MUHAMMAD A. YUNAS</h1>
+            <h2 class="text-xl md:text-3xl font-light text-blue-200 mb-6">Strategic GTM Playbook & Performance Telemetry</h2>
+            <p class="text-lg md:text-xl max-w-3xl leading-relaxed text-slate-300">
+                18+ years translating complex AI-Native platforms, Cybersecurity, and Fintech APIs into CFO-aligned value narratives. Elevating product marketing from a support function to a primary revenue driver.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 sm:px-12 lg:px-24 py-12 space-y-16">
+
+        <section>
+            <div class="mb-8">
+                <h3 class="text-3xl font-bold text-primary border-b-4 border-accent pb-2 inline-block">Executive Snapshot</h3>
+                <p class="mt-4 text-lg text-slate-600">Core business metrics demonstrating the direct commercial impact of optimized, enterprise-grade product marketing strategies across Fortune 500 and Series B+ scale-ups.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl shadow-md p-8 border-t-4 border-secondary flex flex-col justify-center items-center text-center">
+                    <span class="text-5xl font-extrabold text-primary mb-2">&#36;150M+</span>
+                    <span class="text-sm uppercase tracking-wider font-semibold text-slate-500">Revenue Influenced</span>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-8 border-t-4 border-secondary flex flex-col justify-center items-center text-center">
+                    <span class="text-5xl font-extrabold text-primary mb-2">&#36;24M</span>
+                    <span class="text-sm uppercase tracking-wider font-semibold text-slate-500">Net-New Pipeline</span>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-8 border-t-4 border-secondary flex flex-col justify-center items-center text-center">
+                    <span class="text-5xl font-extrabold text-primary mb-2">&#36;5M+</span>
+                    <span class="text-sm uppercase tracking-wider font-semibold text-slate-500">ARR Preserved via AI</span>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-8 border-t-4 border-secondary flex flex-col justify-center items-center text-center">
+                    <span class="text-5xl font-extrabold text-primary mb-2">80%</span>
+                    <span class="text-sm uppercase tracking-wider font-semibold text-slate-500">Team Promotion Rate</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <section class="bg-white rounded-xl shadow-md p-8">
+                <h3 class="text-2xl font-bold text-primary mb-4">GTM Velocity & Efficiency</h3>
+                <p class="text-slate-600 mb-6 text-sm">Strategic positioning goes beyond lead generation; it fundamentally accelerates deal velocity. By crafting CFO-aligned narratives, sales cycles are compressed and customer acquisition costs are systematically reduced.</p>
+                
+                <div class="chart-container">
+                    <canvas id="velocityChart"></canvas>
+                </div>
+                
+                <div class="mt-6 p-4 bg-slate-50 rounded-lg border border-slate-100">
+                    <p class="text-sm text-slate-700"><strong>Key Takeaway:</strong> Eliminating feature-based messaging in favor of risk-management narratives reduced enterprise sales cycles by 66% while slashing CAC by 15% through ML-driven personalization.</p>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-xl shadow-md p-8">
+                <h3 class="text-2xl font-bold text-primary mb-4">Market Dominance Multipliers</h3>
+                <p class="text-slate-600 mb-6 text-sm">Product marketing must outposition legacy competitors. These performance multipliers represent market share captured and direct competitive win-rate improvements driven by differentiated value narratives.</p>
+                
+                <div class="chart-container">
+                    <canvas id="dominanceChart"></canvas>
+                </div>
+
+                <div class="mt-6 p-4 bg-slate-50 rounded-lg border border-slate-100">
+                    <p class="text-sm text-slate-700"><strong>Key Takeaway:</strong> Reframing Dell's technical recovery capabilities as "business-continuity insurance" resulted in a 42% competitive win-rate improvement and drove the division's NPS up by 25 points.</p>
+                </div>
+            </section>
+
+        </div>
+
+        <section class="bg-white rounded-xl shadow-md p-8 lg:p-12 border-l-8 border-accent">
+            <div class="mb-10 text-center max-w-3xl mx-auto">
+                <h3 class="text-3xl font-bold text-primary mb-4">The CQ-EQ-IQ Operational Framework</h3>
+                <p class="text-lg text-slate-600">An integrated operating system for global GTM strategy. This triad ensures that narrative strategy is culturally fluent, cross-functionally aligned, and analytically rigorous.</p>
+            </div>
+
+            <div class="cq-eq-iq-container">
+                <div class="framework-node bg-primary">
+                    <span class="text-2xl font-bold mb-2">CQ</span>
+                    <span class="text-sm font-medium tracking-wide uppercase">Cultural Intel</span>
+                    <p class="text-xs mt-2 opacity-90">Localization & Global Scale</p>
+                </div>
+                
+                <div class="hidden md:flex text-slate-300 text-4xl">&plus;</div>
+                <div class="flex md:hidden text-slate-300 text-4xl">&darr;</div>
+
+                <div class="framework-node bg-secondary">
+                    <span class="text-2xl font-bold mb-2">EQ</span>
+                    <span class="text-sm font-medium tracking-wide uppercase">Emotional Intel</span>
+                    <p class="text-xs mt-2 opacity-90">Cross-Functional Alignment</p>
+                </div>
+
+                <div class="hidden md:flex text-slate-300 text-4xl">&plus;</div>
+                <div class="flex md:hidden text-slate-300 text-4xl">&darr;</div>
+
+                <div class="framework-node bg-accent">
+                    <span class="text-2xl font-bold mb-2">IQ</span>
+                    <span class="text-sm font-medium tracking-wide uppercase">Analytical Rigor</span>
+                    <p class="text-xs mt-2 text-primary font-semibold">AI & Data Architecture</p>
+                </div>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-slate-700">
+                <div class="p-4 bg-slate-50 rounded-md">
+                    <strong>CQ in Action:</strong> Personally directed localization across EMEA, APAC, and the Americas, achieving 74% enterprise penetration without outsourcing the core narrative.
+                </div>
+                <div class="p-4 bg-slate-50 rounded-md">
+                    <strong>EQ in Action:</strong> Aligned Product, Sales, and Success teams to build Partner Advisory Councils, elevating Net Promoter Scores by 25 points.
+                </div>
+                <div class="p-4 bg-slate-50 rounded-md">
+                    <strong>IQ in Action:</strong> Architected NLP social listening and ML-driven buyer personalization, predicting market shifts 3 months ahead of competitors.
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="mb-8">
+                <h3 class="text-3xl font-bold text-primary border-b-4 border-accent pb-2 inline-block">Modern PMM Technology Stack</h3>
+                <p class="mt-4 text-lg text-slate-600">Leveraging advanced, data-driven toolsets to execute scalable Account-Based Marketing (ABM) and operational intelligence.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <h4 class="font-bold text-secondary mb-3 uppercase tracking-wider text-sm">CRM & Automation</h4>
+                    <ul class="space-y-2 text-slate-600 font-medium">
+                        <li>&bull; Salesforce</li>
+                        <li>&bull; HubSpot &amp; Marketo</li>
+                        <li>&bull; Pardot &amp; Clari</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <h4 class="font-bold text-secondary mb-3 uppercase tracking-wider text-sm">Intelligence & ABM</h4>
+                    <ul class="space-y-2 text-slate-600 font-medium">
+                        <li>&bull; Klue &amp; Crayon (Competitive)</li>
+                        <li>&bull; Gong (Conversation Intel)</li>
+                        <li>&bull; 6sense &amp; Demandbase</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <h4 class="font-bold text-secondary mb-3 uppercase tracking-wider text-sm">Analytics & AI</h4>
+                    <ul class="space-y-2 text-slate-600 font-medium">
+                        <li>&bull; Pendo &amp; Amplitude</li>
+                        <li>&bull; Tableau &amp; Looker</li>
+                        <li>&bull; NLP Social Listening Models</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-10 text-center mt-12">
+        <p class="font-bold text-white tracking-widest uppercase mb-2">Listen Deeply. Clarify Relentlessly. Execute Decisively.</p>
+        <p class="text-sm">Yunas Candidate Reference Architecture 2026</p>
+    </footer>
+
+    <script>
+        function wrapLabel(label, maxChars = 16) {
+            if (label.length <= maxChars) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxChars && currentLine.length > 0) {
+                    lines.push(currentLine.trim());
+                    currentLine = word + ' ';
+                } else {
+                    currentLine += word + ' ';
+                }
+            });
+            if (currentLine.trim().length > 0) lines.push(currentLine.trim());
+            return lines;
+        }
+
+        const tooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        const velocityLabelsRaw = ['Sales Cycle Reduction', 'YoY Revenue Growth', 'CAC Reduction'];
+        const velocityLabels = velocityLabelsRaw.map(l => wrapLabel(l));
+        
+        const ctxVelocity = document.getElementById('velocityChart').getContext('2d');
+        new Chart(ctxVelocity, {
+            type: 'bar',
+            data: {
+                labels: velocityLabels,
+                datasets: [{
+                    label: 'Percentage Improvement (%)',
+                    data: [66, 30, 15],
+                    backgroundColor: ['#0F294A', '#2B6CB0', '#38B2AC'],
+                    borderWidth: 0,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: tooltipConfig
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 100,
+                        grid: { color: '#f1f5f9' }
+                    },
+                    y: {
+                        grid: { display: false },
+                        ticks: { font: { family: 'ui-sans-serif, system-ui, sans-serif', weight: '500' }, color: '#475569' }
+                    }
+                }
+            }
+        });
+
+        const dominanceLabelsRaw = ['Competitive Win-Rate Lift', 'Market Share Captured', 'Team Promotion Rate'];
+        const dominanceLabels = dominanceLabelsRaw.map(l => wrapLabel(l));
+
+        const ctxDominance = document.getElementById('dominanceChart').getContext('2d');
+        new Chart(ctxDominance, {
+            type: 'polarArea',
+            data: {
+                labels: dominanceLabels,
+                datasets: [{
+                    data: [42, 38, 80],
+                    backgroundColor: [
+                        'rgba(15, 41, 74, 0.85)',
+                        'rgba(43, 108, 176, 0.85)',
+                        'rgba(56, 178, 172, 0.85)'
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: { font: { family: 'ui-sans-serif, system-ui, sans-serif' }, color: '#475569', padding: 20 }
+                    },
+                    tooltip: tooltipConfig
+                },
+                scales: {
+                    r: {
+                        ticks: { display: false },
+                        grid: { color: '#e2e8f0' }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

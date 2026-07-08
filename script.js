@@ -1,30 +1,74 @@
-const yearElement = document.getElementById('year');
-if (yearElement) {
-  yearElement.textContent = new Date().getFullYear();
-}
+// Year in footer
+document.getElementById('year').textContent = new Date().getFullYear();
 
-const reveals = document.querySelectorAll('.reveal');
+// Narration lines per section
+const narrationMap = {
+  hero: "Starting strong. Let’s set the tone.",
+  about: "Clarity drives momentum.",
+  story: "Every system tells a story — this one’s mine.",
+  work: "These aren’t projects. They’re inflection points.",
+  "case-study": "Transformation is never accidental.",
+  "sense-analyze-act": "Precision is the operating system.",
+  portfolio: "Every frame is a signal.",
+  contact: "Good work. Let’s continue building forward."
+};
 
-document.querySelectorAll('.metric-card.reveal').forEach((card, index) => {
-  card.style.transitionDelay = `${index * 90}ms`;
+const narrationEl = document.getElementById('personaNarration');
+const personaWrapper = document.querySelector('.persona-wrapper');
+
+let narrationTimeout = null;
+
+// IntersectionObserver for sections
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      const id = entry.target.id;
+      const line = narrationMap[id];
+      if (!line) return;
+
+      // Set narration text
+      narrationEl.textContent = line;
+
+      // Show bubble
+      narrationEl.classList.add('visible');
+
+      // Persona glow on
+      if (personaWrapper) {
+        personaWrapper.classList.add('glow');
+      }
+
+      // Clear previous timeout
+      if (narrationTimeout) {
+        clearTimeout(narrationTimeout);
+      }
+
+      // Hide after a few seconds
+      narrationTimeout = setTimeout(() => {
+        narrationEl.classList.remove('visible');
+        if (personaWrapper) {
+          personaWrapper.classList.remove('glow');
+        }
+      }, 4000);
+    });
+  },
+  {
+    threshold: 0.4
+  }
+);
+
+// Observe key sections
+[
+  'hero',
+  'about',
+  'story',
+  'work',
+  'case-study',
+  'sense-analyze-act',
+  'portfolio',
+  'contact'
+].forEach((id) => {
+  const el = document.getElementById(id);
+  if (el) observer.observe(el);
 });
-
-if ('IntersectionObserver' in window) {
-  const observer = new IntersectionObserver(
-    (entries, observerInstance) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-        observerInstance.unobserve(entry.target);
-      });
-    },
-    {
-      threshold: 0.18,
-      rootMargin: '0px 0px -10% 0px'
-    }
-  );
-
-  reveals.forEach((element) => observer.observe(element));
-} else {
-  reveals.forEach((element) => element.classList.add('is-visible'));
-}
