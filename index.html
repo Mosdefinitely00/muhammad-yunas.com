@@ -1,55 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad A. Yunas | Senior Product Marketing Executive</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1e293b; max-width: 800px; margin: 0 auto; padding: 2rem; }
-        h1 { font-size: 2.5rem; margin-bottom: 0.2rem; color: #0f172a; }
-        h2 { font-size: 1.5rem; border-bottom: 2px solid #cbd5e1; padding-bottom: 0.5rem; margin-top: 2.5rem; }
-        .subtitle { font-size: 1.2rem; color: #475569; margin-bottom: 2rem; font-weight: 500; }
-        .framework-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .card { background: #f8fafc; border: 1px solid #e2e8f0; padding: 1.5rem; border-radius: 8px; }
-        .card h3 { margin-top: 0; color: #0f172a; }
-        .highlight { font-weight: 600; color: #b91c1c; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline';">
+  <title>Muhammad A. Yunas | Senior Product Marketing Executive</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #111827;
+      --card-border: #1f2937;
+      --accent: #3b82f6;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 32px;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .role-badge {
+      display: inline-block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+
+    .lead {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 750px;
+    }
+
+    section {
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--card-border);
+    }
+
+    .mandate-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-left: 4px solid var(--accent);
+      padding: 24px;
+      border-radius: 6px;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 24px;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .tech-list {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 24px;
+      border-radius: 6px;
+    }
+
+    .tech-list p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding-top: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+  </style>
 </head>
 <body>
 
+  <div class="container">
     <header>
-        <h1>Muhammad A. Yunas</h1>
-        <div class="subtitle">Senior Product Marketing Executive | Go-To-Market Strategy</div>
-        <p>Bridging OT/IT convergence and scaling enterprise AI infrastructure. Delivering high-signal GTM frameworks for next-generation compute and agentic models.</p>
+      <h1>Muhammad A. Yunas</h1>
+      <div class="role-badge">Senior Product Marketing Executive | Go-To-Market Strategy</div>
+      <p class="lead">
+        Bridging OT/IT convergence and scaling enterprise AI infrastructure. Delivering high-signal GTM frameworks for next-generation compute and agentic architectures.
+      </p>
     </header>
 
     <section>
-        <h2>Executive Mandate</h2>
-        <p>Proven track record of generating $9M+ in net-new revenue pipelines and driving 30% YoY growth. Expert in repositioning complex technical capabilities—from Physical Operations Intelligence to scalable LLM/GGUF architectures—into dominant commercial narratives.</p>
+      <h2>Executive Mandate</h2>
+      <div class="mandate-box">
+        Proven track record of generating $9M+ in net-new revenue pipelines and driving 30% YoY growth. Expert in repositioning complex technical capabilities—from Physical Operations Intelligence to scalable LLM/GGUF architectures—into dominant commercial narratives.
+      </div>
     </section>
 
     <section>
-        <h2>GTM Framework: Sense, Analyze, Act</h2>
-        <div class="framework-grid">
-            <div class="card">
-                <h3>Sense</h3>
-                <p>Ingesting complex, decentralized market data and enterprise telemetry. Mapping the total addressable market with high-fidelity signal extraction.</p>
-            </div>
-            <div class="card">
-                <h3>Analyze</h3>
-                <p>Processing market intelligence through rigorous, structured frameworks. Translating hardware (e.g., Tenstorrent) and model capabilities (e.g., Tribe AI) into distinct competitive advantages.</p>
-            </div>
-            <div class="card">
-                <h3>Act</h3>
-                <p>Deploying ruthless, high-velocity acquisition strategies. Optimizing enterprise acquisition economics and accelerating time-to-revenue.</p>
-            </div>
+      <h2>GTM Framework: Sense, Analyze, Act</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-title">01. Sense</div>
+          <p>Ingesting complex, decentralized market data and enterprise telemetry. Mapping the total addressable market with high-fidelity signal extraction.</p>
         </div>
+        <div class="card">
+          <div class="card-title">02. Analyze</div>
+          <p>Processing market intelligence through rigorous, structured frameworks. Translating hardware and model capabilities into distinct competitive advantages.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">03. Act</div>
+          <p>Deploying high-velocity acquisition strategies. Optimizing enterprise acquisition economics and accelerating time-to-revenue.</p>
+        </div>
+      </div>
     </section>
 
     <section>
-        <h2>Technical Core</h2>
+      <h2>Technical Core</h2>
+      <div class="tech-list">
         <p>Extensive hands-on expertise with local LLM deployments, GGUF quantization formats, AnythingLLM, and secure network routing protocols (VPN/Secure DNS) to ensure enterprise-grade data privacy and model efficacy.</p>
+      </div>
     </section>
+
+    <footer>
+      &copy; 2026 Muhammad A. Yunas. All rights reserved.
+    </footer>
+  </div>
 
 </body>
 </html>
